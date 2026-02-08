@@ -5,14 +5,6 @@
   "scripts": {
     "dev": "cd frontend && yarn start",
     "build": "cd frontend && yarn build",
-    "start": "cd frontend && yarn start",
-    "install:frontend": "cd frontend && yarn install"
-  },
-  "dependencies": {
-    "axios": "^1.13.5",
-    "framer-motion": "^12.33.0",
-    "lucide-react": "^0.563.0",
-    "react": "^19.2.4",
-    "sonner": "^2.0.7"
+    "start": "cd frontend && yarn start"
   }
 }

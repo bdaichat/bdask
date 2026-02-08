@@ -5,7 +5,7 @@
 
 import axios from 'axios';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || '';
 
 // Demo data for fallback when API is unavailable
 const DEMO_CRICKET_SCORES = [

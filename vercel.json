@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd frontend && yarn install && yarn build",
+  "buildCommand": "cd frontend && pnpm install && pnpm build",
   "outputDirectory": "frontend/build",
-  "installCommand": "cd frontend && yarn install",
+  "installCommand": "cd frontend && pnpm install",
   "framework": null,
   "rewrites": [
     {

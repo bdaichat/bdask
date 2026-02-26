@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd frontend && pnpm install && pnpm build",
+  "buildCommand": "pnpm --filter frontend build",
   "outputDirectory": "frontend/build",
-  "installCommand": "cd frontend && pnpm install",
+  "installCommand": "pnpm install",
   "framework": null,
   "rewrites": [
     {

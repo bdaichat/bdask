@@ -103,7 +103,7 @@ export const SuggestionChips = ({
   const suggestions = useMemo(() => {
     const allSuggestions = isBengali ? BENGALI_SUGGESTIONS : ENGLISH_SUGGESTIONS;
     return showAll ? allSuggestions : allSuggestions.slice(0, 6);
-  }, [lastMessage, showAll, isBengali]);
+  }, [showAll, isBengali]);
   
   // Check scroll position for arrow visibility
   const checkScroll = () => {

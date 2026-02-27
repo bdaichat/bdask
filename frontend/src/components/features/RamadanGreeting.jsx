@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Moon, Star, Sparkles, X } from 'lucide-react';
 
@@ -16,11 +16,7 @@ const RamadanGreeting = ({ type = 'banner', onClose }) => {
   const RAMADAN_START = new Date('2025-03-01');
   const RAMADAN_END = new Date('2025-03-30');
 
-  useEffect(() => {
-    checkRamadanStatus();
-  }, []);
-
-  const checkRamadanStatus = () => {
+  const checkRamadanStatus = useCallback(() => {
     const now = new Date();
     // For testing, always show
     // In production: const inRamadan = now >= RAMADAN_START && now <= RAMADAN_END;
@@ -31,7 +27,11 @@ const RamadanGreeting = ({ type = 'banner', onClose }) => {
       const daysDiff = Math.floor((now - RAMADAN_START) / (1000 * 60 * 60 * 24)) + 1;
       setRamadanDay(Math.min(Math.max(daysDiff, 1), 30));
     }
-  };
+  }, [RAMADAN_START]);
+
+  useEffect(() => {
+    checkRamadanStatus();
+  }, [checkRamadanStatus]);
 
   const handleClose = () => {
     setIsVisible(false);

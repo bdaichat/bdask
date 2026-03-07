@@ -5,7 +5,7 @@
 
 import axios from 'axios';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || '';
 
 // News categories
 export const NEWS_CATEGORIES = [

@@ -31,8 +31,12 @@ import {
   RamadanGreeting
 } from "@/components/features";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || '';
 const API = `${BACKEND_URL}/api`;
+
+if (!process.env.REACT_APP_BACKEND_URL) {
+  console.warn('[BdAsk] REACT_APP_BACKEND_URL is not set. API calls will fail.');
+}
 
 /**
  * Premium Ocean Atmosphere Background

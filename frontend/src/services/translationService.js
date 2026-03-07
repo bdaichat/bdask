@@ -20,7 +20,7 @@ export const SUPPORTED_LANGUAGES = [
   { code: 'ko', name: 'কোরিয়ান', nameEn: 'Korean' }
 ];
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || '';
 
 /**
  * Translate text using backend API
